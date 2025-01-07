@@ -168,6 +168,94 @@ button{
 }
 
 .socials a:hover{
-    background-color: #44576d;
+    background-color: red;
     font-size: 18px;
 }
+
+@media (max-width:768px){
+    .nav-list li{
+        margin-left: 20px;
+        font-size: medium;
+    }
+
+    .user-credentials{
+        font-size: medium;
+        gap: 10px;
+    }
+
+    .hero-section{
+        flex-direction: column;
+        align-items: center;
+        padding: 50px 20px;
+    }
+
+    .right-div img{
+        width: 300px;
+    }
+
+    .services-section{
+        height: 100vh;
+        padding: 50px 20px;
+    }
+
+    .container{
+        grid-template-columns: repeat(2,1fr 2fr);
+    }
+
+    .contactFooter{
+        height: 80vh;
+    }
+
+    .contact-section form{
+        width: 100%;
+        padding: 0 20px;
+    }
+
+    input,textarea{
+        width: 100%;
+        max-width: 400px;
+    }
+}
+
+@media (max-width: 480px) {
+    .nav-list li {
+      margin: 10px 0;
+    }
+    .navdiv {
+      flex-direction: column;
+      padding: 10px;
+    }
+    .user-credentials {
+      display: flex;
+      justify-content: end;
+      align-items: end;
+    }
+    .hero-section {
+      padding: 30px 10px;
+    }
+    .left-div h1 {
+      font-size: 2.5rem;
+    }
+    .left-div h4 {
+      font-size: 1.2rem;
+    }
+    .right-div img {
+      width: 100%;
+      max-width: 250px;
+    }
+    .services-section {
+      height: 100vh;
+      margin-bottom: 50px;
+    }
+    .container {
+      grid-template-columns: 1fr;
+      margin-bottom: 50px;
+    }
+    .card {
+      padding: 15px;
+    }
+    button {
+      width: 100%;
+      max-width: 400px;
+    }
+  }

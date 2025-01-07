@@ -1,87 +1,108 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Personal Portfolio</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js"></script>
+  </head>
+  <body>
     <nav class="navbar">
-        <div class="navdiv">
-            <ul class="nav-list">
-                <a href="#"><li>Home</li></a>
-                <a href="#"><li>About</li></a>
-                <a href="./services.html"><li>Services</li></a>
-                <a href="#"><li>Blog</li></a>
-                <a href="#contact"><li>Contact</li></a>
-            </ul>
+      <div class="navdiv">
+        <ul class="nav-list">
+          <a href="#"><li>Home</li></a>
+          <a href="#"><li>About</li></a>
+          <a href="#services"><li>Services</li></a>
+          <a href="#"><li>Blog</li></a>
+          <a href="#contact"><li>Contact</li></a>
+        </ul>
 
-            <ul class="user-credentials">
-                <a href="#"><li>Login</li></a>
-                <a href="#"><li>Sign up</li></a>
-            </ul>
-        </div>
+        <ul class="user-credentials">
+          <a href="#"><li>Login</li></a>
+          <a href="#"><li>Sign up</li></a>
+        </ul>
+      </div>
     </nav>
 
     <section class="hero-section">
-        <div class="left-div">
-            <h3>Hey, I'm</h3>
-            <h1>Puskar Kumar Thakur</h1>
-            <h4>Beginner in <span id="web-dev">Web Development</span></h4>
-        </div>
-        <div class="right-div">
-            <img src="profile.jpg" alt="My Image">
-        </div>
+      <div class="left-div">
+        <h3>Hey, I'm</h3>
+        <h1>Puskar Kumar Thakur</h1>
+        <h4>Beginner in <span id="web-dev">Web Development</span></h4>
+      </div>
+      <div class="right-div">
+        <img src="profile.jpg" alt="My Image" />
+      </div>
     </section>
-    <section class=" Services-section" id="services">
-<h1>Services</h1>
-<div class="container">
-    <div class="card">
-        <h2> Web Development</h2>
-        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vitae, 
-            similique. Ipsam, aperiam! Qui amet a laboriosam ipsum, facere 
-            error magnam iste. Rerum ipsum ipsa veritatis amet, consequatur 
-            non tenetur nobis!</p>
-    </div>
-    <div class="card">
-        <h2> Graphic Design</h2>
-        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vitae, 
-            similique. Ipsam, aperiam! Qui amet a laboriosam ipsum, facere 
-            error magnam iste. Rerum ipsum ipsa veritatis amet, consequatur 
-            non tenetur nobis!</p>   
-    </div>
-    <div class="card">
-        <h2> Digital Marketing</h2>
-        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vitae, 
-            similique. Ipsam, aperiam! Qui amet a laboriosam ipsum, facere 
-            error magnam iste. Rerum ipsum ipsa veritatis amet, consequatur 
-            non tenetur nobis!</p>   
+    <section class="Services-section" id="services">
+      <h1>Services</h1>
+      <div class="container">
+        <div class="card">
+          <h2>Web Development</h2>
+          <p>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vitae,
+            similique. Ipsam, aperiam! Qui amet a laboriosam ipsum, facere error
+            magnam iste. Rerum ipsum ipsa veritatis amet, consequatur non
+            tenetur nobis!
+          </p>
         </div>
-
-</div>
+        <div class="card">
+          <h2>Graphic Design</h2>
+          <p>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vitae,
+            similique. Ipsam, aperiam! Qui amet a laboriosam ipsum, facere error
+            magnam iste. Rerum ipsum ipsa veritatis amet, consequatur non
+            tenetur nobis!
+          </p>
+        </div>
+        <div class="card">
+          <h2>Digital Marketing</h2>
+          <p>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vitae,
+            similique. Ipsam, aperiam! Qui amet a laboriosam ipsum, facere error
+            magnam iste. Rerum ipsum ipsa veritatis amet, consequatur non
+            tenetur nobis!
+          </p>
+        </div>
+      </div>
     </section>
     <section class="contact-section" id="contact">
-        <h1>Contact Me</h1>
-        <form>
-            <input type="text" id="name" placeholder="Enter your name"./>
-            <input type="email" id="email" placeholder="Email Address"./>
-            <textarea id="message" rows="5" placeholder="Your message"></textarea>
+      <h1>Contact Me</h1>
+      <form id="form">
+        <input type="text" id="name" placeholder="Enter your name" . />
+        <input type="email" id="email" placeholder="Email Address" . />
+        <input type="text" id="password" placeholder="Password" />
+        <textarea id="message" rows="5" placeholder="Your message"></textarea>
 
-            <button type="submit">Send Message</button>
-        </form>
+        <button type="submit">Send Message</button>
+      </form>
     </section>
 
     <footer class="footer">
-        <p>&copy; 2025 Puskar Kumar Thakur</p>
+      <p>&copy; 2025 Puskar Kumar Thakur</p>
 
-        <div class="socials">
-            <a href="https://github.com/thakurpuskar"><i class="fa-brands fa-github"></i></a>
-            <a href="https://www.linkedin.com/in/pushkar-kumar-thakur-114775324/"><i class="fa-brands fa-linkedin"></i></a>
-            <a href="https://www.facebook.com/profile.php?id=61555665540439"><i class="fa-brands fa-facebook"></i></a>
-            <a href="https://x.com/KumarPuskar14"><i class="fa-brands fa-twitter"></i></a>
-        </div>
+      <div class="socials">
+        <a href="https://github.com/thakurpuskar"
+          ><i class="fa-brands fa-github"></i
+        ></a>
+        <a href="https://www.linkedin.com/in/pushkar-kumar-thakur-114775324/"
+          ><i class="fa-brands fa-linkedin"></i
+        ></a>
+        <a href="https://www.facebook.com/profile.php?id=61555665540439"
+          ><i class="fa-brands fa-facebook"></i
+        ></a>
+        <a href="https://x.com/KumarPuskar14"
+          ><i class="fa-brands fa-twitter"></i
+        ></a>
+      </div>
     </footer>
-</body>
+  </body>
 </html>
