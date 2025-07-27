@@ -1,108 +1,233 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Personal Portfolio</title>
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
-      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
-    <link rel="stylesheet" href="style.css" />
-    <script src="script.js"></script>
-  </head>
-  <body>
-    <nav class="navbar">
-      <div class="navdiv">
-        <ul class="nav-list">
-          <a href="#"><li>Home</li></a>
-          <a href="#"><li>About</li></a>
-          <a href="#services"><li>Services</li></a>
-          <a href="#"><li>Blog</li></a>
-          <a href="#contact"><li>Contact</li></a>
-        </ul>
 
-        <ul class="user-credentials">
-          <a href="#"><li>Login</li></a>
-          <a href="#"><li>Sign up</li></a>
-        </ul>
-      </div>
-    </nav>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>My Portfolio</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script defer>
+    function navMenu() {
+      return {
+        open: false,
+        toggle() {
+          this.open = !this.open;
+        }
+      }
+    }
+  </script>
+</head>
 
-    <section class="hero-section">
-      <div class="left-div">
-        <h3>Hey, I'm</h3>
-        <h1>Puskar Kumar Thakur</h1>
-        <h4>Beginner in <span id="web-dev">Web Development</span></h4>
+<body class="bg-black">
+
+  <nav class="fixed top-0 left-0 w-full bg-black shadow-md z-50" x-data="navMenu()">
+    <div class="max-w-screen-xl mx-auto px-6 py-4 flex justify-between items-center">
+
+      <div class="text-lg font-medium text-white px-2 py-2">
+        My Portfolio
       </div>
-      <div class="right-div">
-        <img src="profile.jpg" alt="My Image" />
-      </div>
+
+      <ul class="hidden md:flex space-x-6 text-white font-medium">
+        <li><a href="#home"
+            class="block text-lg font-medium text-white hover:bg-purple-900 px-2 py-2 rounded transition">Home</a></li>
+        <li><a href="#portfolio"
+            class="block text-lg font-medium text-white hover:bg-purple-900 px-2 py-2 rounded transition">Portfolio</a>
+        </li>
+        <li><a href="#about"
+            class="block text-lg font-medium text-white hover:bg-purple-900 px-2 py-2 rounded transition">About</a></li>
+        <li><a href="#service"
+            class="block text-lg font-medium text-white hover:bg-purple-900 px-2 py-2 rounded transition">Service</a>
+        </li>
+        <li><a href="#skills"
+            class="block text-lg font-medium text-white hover:bg-purple-900 px-2 py-2 rounded transition">Skills</a>
+        </li>
+        <li><a href="#testimonial"
+            class="block text-lg font-medium text-white hover:bg-purple-900 px-2 py-2 rounded transition0">Testimonial</a>
+        </li>
+        <li><a href="#contact"
+            class="block text-lg font-medium text-white hover:bg-purple-900 px-2 py-2 rounded transition">Contact</a>
+        </li>
+      </ul>
+
+      <button class="md:hidden text-white focus:outline-none" @click="toggle">
+        <svg x-show="!open" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+          stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+        <svg x-show="open" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+          stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+        </svg>
+      </button>
+    </div>
+
+    <div class="md:hidden" x-show="open" x-transition>
+      <ul class="md:hidden mt-4 flex flex-col items-center gap-0.5">
+        <li><a href="#home"
+            class="block text-lg font-medium text-white hover:bg-purple-900 px-3 py-2 rounded transition">Home</a></li>
+        <li><a href="#portfolio"
+            class="block text-lg font-medium text-white hover:bg-purple-900 px-3 py-2 rounded transition">Portfolio</a>
+        </li>
+        <li><a href="#about"
+            class="block text-lg font-medium text-white hover:bg-purple-900 px-3 py-2 rounded transition">About</a></li>
+        <li><a href="#service"
+            class="block text-lg font-medium text-white hover:bg-purple-900 px-3 py-2 rounded transition">Service</a>
+        </li>
+        <li><a href="#skills"
+            class="block text-lg font-medium text-white hover:bg-purple-900 px-3 py-2 rounded transition">Skills</a>
+        </li>
+        <li><a href="#testimonial"
+            class="block text-lg font-medium text-white hover:bg-purple-900 px-3 py-2 rounded transition">Testimonial</a>
+        </li>
+        <li><a href="#contact"
+            class="block text-lg font-medium text-white hover:bg-purple-900 px-3 py-2 rounded transition">Contact</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Dummy content -->
+  <div class="pt-24 px-6 space-y-20 text-white">
+    <section id="home" class="min-h-screen">
+      <h1 class="text-3xl">Home</h1>
     </section>
-    <section class="Services-section" id="services">
-      <h1>Services</h1>
-      <div class="container">
-        <div class="card">
-          <h2>Web Development</h2>
-          <p>
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vitae,
-            similique. Ipsam, aperiam! Qui amet a laboriosam ipsum, facere error
-            magnam iste. Rerum ipsum ipsa veritatis amet, consequatur non
-            tenetur nobis!
-          </p>
-        </div>
-        <div class="card">
-          <h2>Graphic Design</h2>
-          <p>
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vitae,
-            similique. Ipsam, aperiam! Qui amet a laboriosam ipsum, facere error
-            magnam iste. Rerum ipsum ipsa veritatis amet, consequatur non
-            tenetur nobis!
-          </p>
-        </div>
-        <div class="card">
-          <h2>Digital Marketing</h2>
-          <p>
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vitae,
-            similique. Ipsam, aperiam! Qui amet a laboriosam ipsum, facere error
-            magnam iste. Rerum ipsum ipsa veritatis amet, consequatur non
-            tenetur nobis!
-          </p>
-        </div>
-      </div>
+    <section id="portfolio" class="min-h-screen">
+      <h1 class="text-3xl">Portfolio</h1>
     </section>
-    <section class="contact-section" id="contact">
-      <h1>Contact Me</h1>
-      <form id="form">
-        <input type="text" id="name" placeholder="Enter your name" . />
-        <input type="email" id="email" placeholder="Email Address" . />
-        <input type="text" id="password" placeholder="Password" />
-        <textarea id="message" rows="5" placeholder="Your message"></textarea>
-
-        <button type="submit">Send Message</button>
-      </form>
+    <section id="about" class="min-h-screen">
+      <h1 class="text-3xl">About</h1>
     </section>
+    <section id="service" class="min-h-screen">
+      <h1 class="text-3xl">Service</h1>
+    </section>
+    <section id="skills" class="min-h-screen">
+      <h1 class="text-3xl">Skills</h1>
+    </section>
+    <section id="testimonial" class="min-h-screen">
+      <h1 class="text-3xl">Testimonial</h1>
+    </section>
+    <section id="contact" class="min-h-screen">
+      <h1 class="text-3xl">Contact</h1>
+    </section>
+  </div>
 
-    <footer class="footer">
-      <p>&copy; 2025 Puskar Kumar Thakur</p>
+  <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
+</body>
 
-      <div class="socials">
-        <a href="https://github.com/thakurpuskar"
-          ><i class="fa-brands fa-github"></i
-        ></a>
-        <a href="https://www.linkedin.com/in/pushkar-kumar-thakur-114775324/"
-          ><i class="fa-brands fa-linkedin"></i
-        ></a>
-        <a href="https://www.facebook.com/profile.php?id=61555665540439"
-          ><i class="fa-brands fa-facebook"></i
-        ></a>
-        <a href="https://x.com/KumarPuskar14"
-          ><i class="fa-brands fa-twitter"></i
-        ></a>
-      </div>
-    </footer>
-  </body>
 </html>
+
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Personal Portfolio</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="style.css" />
+  <script src="script.js"></script>
+</head>
+
+<body>
+  <nav class="navbar">
+    <div class="navdiv">
+      <ul class="nav-list">
+        <a href="#">
+          <li>Home</li>
+        </a>
+        <a href="#">
+          <li>About</li>
+        </a>
+        <a href="#services">
+          <li>Services</li>
+        </a>
+        <a href="#">
+          <li>Blog</li>
+        </a>
+        <a href="#contact">
+          <li>Contact</li>
+        </a>
+      </ul>
+
+      <ul class="user-credentials">
+        <a href="#">
+          <li>Login</li>
+        </a>
+        <a href="#">
+          <li>Sign up</li>
+        </a>
+      </ul>
+    </div>
+  </nav>
+
+  <section class="hero-section">
+    <div class="left-div">
+      <h3>Hey, I'm</h3>
+      <h1>Puskar Kumar Thakur</h1>
+      <h4>Beginner in <span id="web-dev">Web Development</span></h4>
+    </div>
+    <div class="right-div">
+      <img src="profile.jpg" alt="My Image" />
+    </div>
+  </section>
+  <section class="Services-section" id="services">
+    <h1>Services</h1>
+    <div class="container">
+      <div class="card">
+        <h2>Web Development</h2>
+        <p>
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vitae,
+          similique. Ipsam, aperiam! Qui amet a laboriosam ipsum, facere error
+          magnam iste. Rerum ipsum ipsa veritatis amet, consequatur non
+          tenetur nobis!
+        </p>
+      </div>
+      <div class="card">
+        <h2>Graphic Design</h2>
+        <p>
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vitae,
+          similique. Ipsam, aperiam! Qui amet a laboriosam ipsum, facere error
+          magnam iste. Rerum ipsum ipsa veritatis amet, consequatur non
+          tenetur nobis!
+        </p>
+      </div>
+      <div class="card">
+        <h2>Digital Marketing</h2>
+        <p>
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vitae,
+          similique. Ipsam, aperiam! Qui amet a laboriosam ipsum, facere error
+          magnam iste. Rerum ipsum ipsa veritatis amet, consequatur non
+          tenetur nobis!
+        </p>
+      </div>
+    </div>
+  </section>
+  <section class="contact-section" id="contact">
+    <h1>Contact Me</h1>
+    <form id="form">
+      <input type="text" id="name" placeholder="Enter your name" . />
+      <input type="email" id="email" placeholder="Email Address" . />
+      <input type="text" id="password" placeholder="Password" />
+      <textarea id="message" rows="5" placeholder="Your message"></textarea>
+
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
+
+  <footer class="footer">
+    <p>&copy; 2025 Puskar Kumar Thakur</p>
+
+    <div class="socials">
+      <a href="https://github.com/thakurpuskar"><i class="fa-brands fa-github"></i></a>
+      <a href="https://www.linkedin.com/in/pushkar-kumar-thakur-114775324/"><i class="fa-brands fa-linkedin"></i></a>
+      <a href="https://www.facebook.com/profile.php?id=61555665540439"><i class="fa-brands fa-facebook"></i></a>
+      <a href="https://x.com/KumarPuskar14"><i class="fa-brands fa-twitter"></i></a>
+    </div>
+  </footer>
+</body>
+
+</html> -->
