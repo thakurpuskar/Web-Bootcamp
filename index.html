@@ -18,11 +18,38 @@
       }
     }
   </script>
+
+  <!-- Add in your <head> section -->
+  <style>
+    @keyframes typing {
+      from {
+        width: 0
+      }
+
+      to {
+        width: 100%
+      }
+    }
+
+    @keyframes blink {
+      50% {
+        border-color: transparent
+      }
+    }
+
+    .typing {
+      overflow: hidden;
+      white-space: nowrap;
+      border-right: 2px solid #ec4899;
+      width: 0;
+      animation: typing 3s steps(25, end) forwards, blink 0.75s step-end infinite;
+    }
+  </style>
 </head>
 
 <body class="bg-black">
 
-  <nav class="fixed top-0 left-0 w-full bg-black shadow-md z-50" x-data="navMenu()">
+  <nav class="top-0 left-0 w-full bg-black shadow-md z-50" x-data="navMenu()">
     <div class="max-w-screen-xl mx-auto px-6 py-4 flex justify-between items-center">
 
       <div class="text-lg font-medium text-white px-2 py-2">
@@ -88,53 +115,50 @@
     </div>
   </nav>
 
-  <div class="pt-24 px-6 space-y-20 text-white ">
-
-    <section id="home" class="min-h-screen bg-black text-white pt-24 px-6">
-      <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 items-center gap-8">
-
-
-        <div class="md:col-span-1 space-y-4">
-          <h1 class="text-4xl font-bold">Hi, I'm </h1>
-          <h1 class="text-4xl font-bold">Puskar Kumar Thakur</h1>
-          <p class="text-gray-300">
-            I'm a Web Developer passionate about building beautiful and functional web experiences.
+  <div class="px-6 text-white">
+    <section id="home" class="min-h-screen bg-black flex items-center justify-center w-full">
+      <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-[4fr_5fr_1fr] items-center gap-8 w-full">
+        <div class="text-center md:text-left space-y-4 px-4">
+          <h1 class="text-3xl font-bold leading-tight">Hi, I'm</h1>
+          <h1 class="text-4xl font-extrabold text-blue-400">Puskar Kumar Thakur</h1>
+          <h2 class="text-xl font-semibold text-pink-500">
+            <span class="inline-block typing">Web Developer</span>
+          </h2>
+          <p class="text-gray-300 max-w-md mx-auto md:mx-0">
+            I design and develop responsive, user-friendly websites that blend aesthetics with performance.
+            With a passion for clean code and intuitive design, I aim to deliver digital experiences that leave a
+            lasting impact.
           </p>
-          <a href="./assests/Blue Simple Professional CV Resume.pdf" download
-            class="inline-flex items-center gap-2 px-6 py-3 border border-white text-white rounded-full hover:bg-blue-500 transition">
+          <a href="./assets/Blue Simple Professional CV Resume.pdf" download
+            class="inline-flex items-center gap-2 px-6 py-3 border border-white text-white rounded-full hover:bg-blue-600 transition duration-300">
+            <i class="fa-solid fa-download"></i>
             Download CV
           </a>
-
         </div>
-
-        <div class="md:col-span-1 flex justify-center">
+        <div class="flex justify-center">
           <img src="./assests/profile.jpg" alt="Profile"
-            class="w-64 h-64 object-cover rounded-full border-4 border-white shadow-lg" />
+            class="w-64 h-64 lg:w-80 lg:h-80 object-cover rounded-full shadow-2xl" />
         </div>
-
-
-        <div class="hidden md:flex flex-col items-center space-y-4">
-          <a href="https://facebook.com" target="_blank" class="hover:text-blue-500">
-            <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24">
-              <path
-                d="M22 12a10 10 0 10-11.5 9.95v-7.05H8v-2.9h2.5V9.5c0-2.5 1.5-3.9 3.8-3.9 1.1 0 2.2.2 2.2.2v2.4h-1.2c-1.2 0-1.6.8-1.6 1.6v2h2.8l-.4 2.9h-2.4v7.05A10 10 0 0022 12z" />
-            </svg>
-          </a>
-          <a href="https://instagram.com" target="_blank" class="hover:text-pink-500">
-            <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24">
-              <path
-                d="M12 2.2c3.2 0 3.6 0 4.8.1 1.1.1 1.7.2 2.1.4.5.2.9.4 1.3.9.4.4.7.9.9 1.3.2.5.3 1 .4 2.1.1 1.2.1 1.6.1 4.8s0 3.6-.1 4.8c-.1 1.1-.2 1.7-.4 2.1-.2.5-.4.9-.9 1.3-.4.4-.9.7-1.3.9-.5.2-1 .3-2.1.4-1.2.1-1.6.1-4.8.1s-3.6 0-4.8-.1c-1.1-.1-1.7-.2-2.1-.4a3.6 3.6 0 01-1.3-.9 3.6 3.6 0 01-.9-1.3c-.2-.5-.3-1-.4-2.1-.1-1.2-.1-1.6-.1-4.8s0-3.6.1-4.8c.1-1.1.2-1.7.4-2.1a3.6 3.6 0 01.9-1.3 3.6 3.6 0 011.3-.9c.5-.2 1-.3 2.1-.4C8.4 2.2 8.8 2.2 12 2.2m0-2.2C8.7 0 8.3 0 7.1.1c-1.2.1-2.1.3-2.9.6a5.9 5.9 0 00-2.1 1.3 5.9 5.9 0 00-1.3 2.1c-.3.8-.5 1.7-.6 2.9C0 8.3 0 8.7 0 12s0 3.7.1 4.9c.1 1.2.3 2.1.6 2.9.3.8.8 1.5 1.3 2.1a5.9 5.9 0 002.1 1.3c.8.3 1.7.5 2.9.6 1.2.1 1.6.1 4.9.1s3.7 0 4.9-.1c1.2-.1 2.1-.3 2.9-.6a5.9 5.9 0 002.1-1.3 5.9 5.9 0 001.3-2.1c.3-.8.5-1.7.6-2.9.1-1.2.1-1.6.1-4.9s0-3.7-.1-4.9c-.1-1.2-.3-2.1-.6-2.9a5.9 5.9 0 00-1.3-2.1 5.9 5.9 0 00-2.1-1.3c-.8-.3-1.7-.5-2.9-.6C15.7 0 15.3 0 12 0z" />
-              <circle cx="12" cy="12" r="3.5" />
-            </svg>
-          </a>
-          <a href="https://github.com" target="_blank" class="hover:text-gray-400">
-            <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24">
-              <path
-                d="M12 0C5.4 0 0 5.4 0 12c0 5.3 3.4 9.8 8.1 11.4.6.1.8-.3.8-.6v-2.3c-3.3.7-4-1.4-4-1.4-.5-1.1-1.2-1.4-1.2-1.4-1-.7.1-.7.1-.7 1.1.1 1.7 1.1 1.7 1.1 1 .1.7-.8 1.3-1.2-.8-.1-1.6-.4-1.6-1.8 0-.4.1-.7.3-1-.1-.3-.5-1.2.1-2.5 0 0 .8-.3 2.6 1 .8-.2 1.7-.3 2.6-.3s1.8.1 2.6.3c1.8-1.3 2.6-1 2.6-1 .6 1.3.2 2.2.1 2.5.2.3.3.7.3 1 0 1.3-.8 1.6-1.6 1.8.5.4.8 1 .8 2v3c0 .3.2.7.8.6C20.6 21.8 24 17.3 24 12c0-6.6-5.4-12-12-12z" />
-            </svg>
-          </a>
+        <div class="flex md:flex-col justify-center md:items-end space-x-4 md:space-x-0 md:space-y-4">
+          <a href="https://www.facebook.com/profile.php?id=61555665540439" target="_blank" title="Facebook"
+            class="bg-purple-500 hover:bg-purple-600 w-9 h-9 flex items-center justify-center rounded-full hover:scale-110 transition"><i
+              class="fab fa-facebook"></i></a>
+          <a href="https://github.com/thakurpuskar" target="_blank" title="GitHub"
+            class="bg-gray-700 hover:bg-gray-800 w-9 h-9 flex items-center justify-center rounded-full hover:scale-110 transition"><i
+              class="fab fa-github"></i></a>
+          <a href="https://www.instagram.com/puskarthakur14/" target="_blank" title="Instagram"
+            class="bg-pink-500 hover:bg-pink-600 w-9 h-9 flex items-center justify-center rounded-full hover:scale-110 transition"><i
+              class="fab fa-instagram"></i></a>
+          <a href="https://www.linkedin.com/in/puskar-kumar-thakur-114775324/" target="_blank" title="LinkedIn"
+            class="bg-blue-700 hover:bg-blue-800 w-9 h-9 flex items-center justify-center rounded-full hover:scale-110 transition"><i
+              class="fab fa-linkedin"></i></a>
+          <a href="https://x.com/KumarPuskar14" target="_blank" title="X (Twitter)"
+            class="bg-purple-700 hover:bg-purple-800 w-9 h-9 flex items-center justify-center rounded-full hover:scale-110 transition"><i
+              class="fab fa-x-twitter"></i></a>
+          <a href="https://www.tiktok.com/@puskarthakur14" target="_blank" title="TikTok"
+            class="bg-gray-900 hover:bg-gray-800 w-9 h-9 flex items-center justify-center rounded-full hover:scale-110 transition"><i
+              class="fab fa-tiktok"></i></a>
         </div>
-
       </div>
     </section>
 
