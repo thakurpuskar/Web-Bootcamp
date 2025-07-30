@@ -8,6 +8,8 @@
   <link rel="icon" href="./assests/logo.png" type="image/png">
   <script src="https://cdn.tailwindcss.com"></script>
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" rel="stylesheet" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+
 
   <script defer>
     function navMenu() {
@@ -242,20 +244,173 @@
       </div>
     </section>
 
-    <section id="service" class="min-h-screen">
-      <h1 class="text-3xl">Service</h1>
+    <section id="service" class="min-h-screen py-24 bg-black text-white px-6">
+      <div class="max-w-7xl mx-auto">
+        <h2 class="text-4xl font-bold text-center text-white-500 mb-12">My Services</h2>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div class="bg-gray-900 rounded-xl p-6 shadow-lg hover:shadow-pink-500/50 transition duration-300">
+            <div class="text-pink-500 text-4xl mb-4">
+              <i class="fas fa-code"></i>
+            </div>
+            <h3 class="text-xl font-semibold mb-2">Web Development</h3>
+            <p class="text-gray-400">
+              I build responsive, fast-loading websites using HTML, Tailwind CSS, JavaScript, and Alpine.js.
+            </p>
+          </div>
+          <div class="bg-gray-900 rounded-xl p-6 shadow-lg hover:shadow-pink-500/50 transition duration-300">
+            <div class="text-pink-500 text-4xl mb-4">
+              <i class="fas fa-paint-brush"></i>
+            </div>
+            <h3 class="text-xl font-semibold mb-2">UI/UX Design</h3>
+            <p class="text-gray-400">
+              I design clean, modern interfaces with a strong focus on user experience and intuitive layouts.
+            </p>
+          </div>
+          <div class="bg-gray-900 rounded-xl p-6 shadow-lg hover:shadow-pink-500/50 transition duration-300">
+            <div class="text-pink-500 text-4xl mb-4">
+              <i class="fas fa-database"></i>
+            </div>
+            <h3 class="text-xl font-semibold mb-2">Firebase Integration</h3>
+            <p class="text-gray-400">
+              I integrate Firebase services like authentication, Firestore database, and hosting for full-stack apps.
+            </p>
+          </div>
+        </div>
+      </div>
     </section>
-    <section id="skills" class="min-h-screen">
-      <h1 class="text-3xl">Skills</h1>
+
+    <section id="skills" class="min-h-screen py-24 bg-black text-white px-6">
+      <div class="max-w-7xl mx-auto">
+        <h2 class="text-4xl font-bold text-center text-blue-500 mb-12">My Skills</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div class="bg-gray-900 rounded-xl p-6 shadow-md hover:shadow-blue-500/50 transition duration-300">
+            <h3 class="text-xl font-semibold mb-4 text-blue-400">Frontend</h3>
+            <ul class="space-y-2 text-gray-300">
+              <li><i class="fas fa-check-circle text-blue-400 mr-2"></i> HTML5</li>
+              <li><i class="fas fa-check-circle text-blue-400 mr-2"></i> CSS3 / Tailwind CSS</li>
+              <li><i class="fas fa-check-circle text-blue-400 mr-2"></i> JavaScript</li>
+              <li><i class="fas fa-check-circle text-blue-400 mr-2"></i> Alpine.js</li>
+            </ul>
+          </div>
+          <div class="bg-gray-900 rounded-xl p-6 shadow-md hover:shadow-blue-500/50 transition duration-300">
+            <h3 class="text-xl font-semibold mb-4 text-blue-400">Backend / Database</h3>
+            <ul class="space-y-2 text-gray-300">
+              <li><i class="fas fa-check-circle text-blue-400 mr-2"></i> Firebase (Auth, Firestore)</li>
+              <li><i class="fas fa-check-circle text-blue-400 mr-2"></i> Node.js (Learning)</li>
+              <li><i class="fas fa-check-circle text-blue-400 mr-2"></i> Git / GitHub</li>
+            </ul>
+          </div>
+          <div class="bg-gray-900 rounded-xl p-6 shadow-md hover:shadow-blue-500/50 transition duration-300">
+            <h3 class="text-xl font-semibold mb-4 text-blue-400">Tools & Platforms</h3>
+            <ul class="space-y-2 text-gray-300">
+              <li><i class="fas fa-check-circle text-blue-400 mr-2"></i> VS Code</li>
+              <li><i class="fas fa-check-circle text-blue-400 mr-2"></i> GitHub</li>
+              <li><i class="fas fa-check-circle text-blue-400 mr-2"></i> Netlify / Firebase Hosting</li>
+            </ul>
+          </div>
+        </div>
+      </div>
     </section>
-    <section id="testimonial" class="min-h-screen">
-      <h1 class="text-3xl">Testimonial</h1>
+
+    <section id="testimonials" class="bg-black text-white py-16 px-6">
+      <div class="max-w-7xl mx-auto text-center">
+        <h2 class="text-4xl font-bold text-blue-500 mb-12">What People Say</h2>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div class="bg-gray-900 p-6 rounded-xl shadow-lg hover:shadow-blue-500/50 transition duration-300">
+            <div class="flex items-center space-x-4 mb-4">
+              <img src="./assets/testimonial1.jpg" alt="Person 1" class="w-14 h-14 rounded-full object-cover" />
+              <div>
+                <h4 class="text-lg font-semibold">Aarogya Raj Upreti</h4>
+                <p class="text-sm text-gray-400">Classmate</p>
+              </div>
+            </div>
+            <p class="text-gray-300 leading-relaxed">
+              “Puskar's dedication and consistent effort in real-world web projects make him stand out. His
+              problem-solving skills and clean UI work are commendable.”
+            </p>
+          </div>
+          <div class="bg-gray-900 p-6 rounded-xl shadow-lg hover:shadow-blue-500/50 transition duration-300">
+            <div class="flex items-center space-x-4 mb-4">
+              <img src="./assets/testimonial2.jpg" alt="Person 2" class="w-14 h-14 rounded-full object-cover" />
+              <div>
+                <h4 class="text-lg font-semibold">Khushbu Sah</h4>
+                <p class="text-sm text-gray-400">Project Teammate</p>
+              </div>
+            </div>
+            <p class="text-gray-300 leading-relaxed">
+              “Working with Puskar on our e-commerce report was smooth and inspiring. He handled the frontend
+              beautifully and always came with fresh ideas.”
+            </p>
+          </div>
+          <div class="bg-gray-900 p-6 rounded-xl shadow-lg hover:shadow-blue-500/50 transition duration-300">
+            <div class="flex items-center space-x-4 mb-4">
+              <img src="./assets/testimonial3.jpg" alt="Person 3" class="w-14 h-14 rounded-full object-cover" />
+              <div>
+                <h4 class="text-lg font-semibold">Preeti Kumari</h4>
+                <p class="text-sm text-gray-400">Group Member</p>
+              </div>
+            </div>
+            <p class="text-gray-300 leading-relaxed">
+              “His creativity and web development skills truly shine in group projects. From layout to interaction, he
+              makes every page impactful.”
+            </p>
+          </div>
+        </div>
+      </div>
     </section>
-    <section id="contact" class="min-h-screen">
-      <h1 class="text-3xl">Contact</h1>
+
+    <section id="contact" class="bg-black text-white py-16 px-6">
+      <div class="max-w-4xl mx-auto text-center">
+        <h2 class="text-4xl font-bold text-blue-500 mb-8">Connect With Me</h2>
+        <p class="text-gray-300 mb-12">
+          Whether you have a project in mind, want to collaborate, or just say hi — I’d love to hear from you.
+        </p>
+        <form class="grid grid-cols-1 gap-6 text-left">
+          <div>
+            <label class="block text-sm font-medium text-gray-300 mb-1">Name</label>
+            <input type="text" placeholder="Your Name"
+              class="w-full px-4 py-2 rounded-lg bg-gray-800 text-white focus:outline-none focus:ring-2 focus:ring-blue-500">
+          </div>
+          <div>
+            <label class="block text-sm font-medium text-gray-300 mb-1">Email</label>
+            <input type="email" placeholder="Your Email"
+              class="w-full px-4 py-2 rounded-lg bg-gray-800 text-white focus:outline-none focus:ring-2 focus:ring-blue-500">
+          </div>
+          <div>
+            <label class="block text-sm font-medium text-gray-300 mb-1">Message</label>
+            <textarea rows="4" placeholder="Your Message"
+              class="w-full px-4 py-2 rounded-lg bg-gray-800 text-white focus:outline-none focus:ring-2 focus:ring-blue-500"></textarea>
+          </div>
+          <button type="submit"
+            class="w-full py-3 mt-2 bg-blue-600 hover:bg-blue-700 rounded-lg font-semibold transition duration-300">
+            Send Message
+          </button>
+        </form>
+        <div class="mt-12 flex justify-center space-x-6">
+          <a href="https://www.facebook.com/profile.php?id=61555665540439" target="_blank" title="Facebook"
+            class="bg-purple-500 hover:bg-purple-600 w-9 h-9 flex items-center justify-center rounded-full hover:scale-110 transition"><i
+              class="fab fa-facebook"></i></a>
+          <a href="https://github.com/thakurpuskar" target="_blank" title="GitHub"
+            class="bg-gray-700 hover:bg-gray-800 w-9 h-9 flex items-center justify-center rounded-full hover:scale-110 transition"><i
+              class="fab fa-github"></i></a>
+          <a href="https://www.instagram.com/puskarthakur14/" target="_blank" title="Instagram"
+            class="bg-pink-500 hover:bg-pink-600 w-9 h-9 flex items-center justify-center rounded-full hover:scale-110 transition"><i
+              class="fab fa-instagram"></i></a>
+          <a href="https://www.linkedin.com/in/puskar-kumar-thakur-114775324/" target="_blank" title="LinkedIn"
+            class="bg-blue-700 hover:bg-blue-800 w-9 h-9 flex items-center justify-center rounded-full hover:scale-110 transition"><i
+              class="fab fa-linkedin"></i></a>
+          <a href="https://x.com/KumarPuskar14" target="_blank" title="X (Twitter)"
+            class="bg-purple-700 hover:bg-purple-800 w-9 h-9 flex items-center justify-center rounded-full hover:scale-110 transition"><i
+              class="fab fa-x-twitter"></i></a>
+          <a href="https://www.tiktok.com/@puskarthakur14" target="_blank" title="TikTok"
+            class="bg-gray-900 hover:bg-gray-800 w-9 h-9 flex items-center justify-center rounded-full hover:scale-110 transition"><i
+              class="fab fa-tiktok"></i></a>
+        </div>
+      </div>
     </section>
   </div>
-
   <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
 </body>
 
